@@ -1,0 +1,11 @@
+#JSGF V1.0;
+grammar bank;
+
+public <startBank> = (<exp1> | <exp2>) HOW_MUCH <amount> HOW_MUCH;
+
+<exp1> = DO_WHAT <exp1_verb> DO_WHAT TO_WHO <person_name> TO_WHO;
+<exp1_verb> = 1 [ 2 ] [ 3 ];
+<exp2> = 4 TO_WHO <person_name> TO_WHO DO_WHAT <exp2_verb> DO_WHAT;
+<exp2_verb> = 2 [ 3 ];
+<person_name> = 5 | 6;
+<amount> = 7;

@@ -1,0 +1,11 @@
+#JSGF V1.0;
+grammar bank;
+
+public <startBank> = (<exp1> | <exp2>) HOW_MUCH <amount> HOW_MUCH (元 | 块);
+
+<exp1> = DO_WHAT <exp1_verb> DO_WHAT TO_WHO <person_name> TO_WHO;
+<exp1_verb> = 转 [ 账 ] [ 给 ];
+<exp2> = 给 TO_WHO <person_name> TO_WHO DO_WHAT <exp2_verb> DO_WHAT;
+<exp2_verb> = 转 [ 账 ];
+<person_name> = 张三 | 李四;
+<amount> = 一 (百 | 千);
