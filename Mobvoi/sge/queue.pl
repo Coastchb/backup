@@ -63,8 +63,8 @@ my $config = "conf/queue.conf";
 my %cli_options = ();
 
 my $jobname;
-my $jobstart;
-my $joball;
+my $jobstart = 1;
+my $joball = 1;
 
 my $array_job = 0;
 my $sge_job_id;
